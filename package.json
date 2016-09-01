@@ -1,0 +1,44 @@
+{
+  "name": "paradox",
+  "version": "1.0.0",
+  "description": "Paradox web site",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run lint && webpack --config webpack.config.js -p",
+    "dev": "npm run lint && webpack-dev-server --config webpack.dev.config.js --inline",
+    "lint": "./node_modules/.bin/eslint js",
+    "deploy": "npm run build && git-directory-deploy --directory build --branch gh-pages"
+  },
+  "author": "Shaun Nesbitt",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaunnez/paradox.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "animate.css": "git+https://github.com/daneden/animate.css.git",
+    "babel-core": "latest",
+    "babel-eslint": "latest",
+    "babel-loader": "latest",
+    "babel-preset-es2015": "latest",
+    "bootstrap": "latest",
+    "css-loader": "latest",
+    "eslint": "latest",
+    "extract-text-webpack-plugin": "latest",
+    "file-loader": "latest",
+    "font-awesome": "latest",
+    "gh-pages": "^0.11.0",
+    "git-directory-deploy": "^1.5.1",
+    "jquery": "latest",
+    "jquery.scrollto": "latest",
+    "node-sass": "latest",
+    "postcss-loader": "latest",
+    "sass-loader": "latest",
+    "style-loader": "latest",
+    "url-loader": "latest",
+    "waypoints": "latest",
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
+  }
+}
