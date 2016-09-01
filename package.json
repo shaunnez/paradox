@@ -7,7 +7,7 @@
     "build": "npm run lint && webpack --config webpack.config.js -p",
     "dev": "npm run lint && webpack-dev-server --config webpack.dev.config.js --inline",
     "lint": "./node_modules/.bin/eslint js",
-    "deploy": "npm run build && git-directory-deploy --directory build --branch gh-pages"
+    "deploy": "gh-pages-deploy"
   },
   "author": "Shaun Nesbitt",
   "license": "ISC",
@@ -29,6 +29,7 @@
     "file-loader": "latest",
     "font-awesome": "latest",
     "gh-pages": "^0.11.0",
+    "gh-pages-deploy": "^0.4.2",
     "git-directory-deploy": "^1.5.1",
     "jquery": "latest",
     "jquery.scrollto": "latest",
@@ -40,5 +41,14 @@
     "waypoints": "latest",
     "webpack": "latest",
     "webpack-dev-server": "latest"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "build",
+    "cname": "https://shaunnez.github.io/paradox/",
+    "prep": [
+      "build"
+    ],
+    "post": [ ],
+    "noprompt": false
   }
 }
