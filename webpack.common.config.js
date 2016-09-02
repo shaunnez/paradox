@@ -41,9 +41,6 @@ module.exports = {
             "window.jQuery": 'jquery',
             "windows.jQuery": 'jquery',
         }),
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'public', 'index.hbs')
-        }),
         new HotModuleReplacementPlugin()
     ],
     resolve: {
