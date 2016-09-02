@@ -1,11 +1,12 @@
 var ProvidePlugin = require('webpack').ProvidePlugin;
 var HotModuleReplacementPlugin = require('webpack').HotModuleReplacementPlugin;
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 var path = require('path');
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: [
-        './js/app.js'
+        './public/js/app.js'
     ],
     module: {
         loaders: [{
@@ -19,13 +20,16 @@ module.exports = {
             test: /\.(jpe?g|png|gif)$/,
             exclude: /(node_modules)/,
             loader: 'url-loader?limit=10000'
-        }, {
-            test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: "url-loader?limit=10000&minetype=application/font-woff"
-        }, {
-            test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: "file-loader"
-        }]
+        }, 
+        { 
+            test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/, 
+            loader: "file-loader" 
+        },
+        { 
+            test: /\.(hbs|handlebars)([\?]?.*)$/, 
+            loader: "handlebars-loader" 
+        }
+        ]
     },
     postcss: function() {
         return [autoprefixer];
@@ -36,6 +40,9 @@ module.exports = {
             jQuery: 'jquery',
             "window.jQuery": 'jquery',
             "windows.jQuery": 'jquery',
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'public', 'index.hbs')
         }),
         new HotModuleReplacementPlugin()
     ],
