@@ -26,7 +26,8 @@ import bootstrap from '../../node_modules/bootstrap/dist/js/bootstrap.js';
         function(f) {
             setTimeout(f, 1000 / 60);
         };
-
+    
+    // begin
     init();
 
     // helper
