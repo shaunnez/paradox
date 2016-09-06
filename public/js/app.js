@@ -33,6 +33,9 @@ import bootstrap from '../../node_modules/bootstrap/dist/js/bootstrap.js';
             $('html, body').animate({
                 scrollTop: $( $.attr(this, 'href') ).offset().top
             }, 500);
+            if($(this).hasClass('nav-link') && $("#navbar-menu").hasClass('in')) {
+                $('.navbar-toggler').click();
+            }
         }
     });
 
