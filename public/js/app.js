@@ -87,7 +87,7 @@ import bootstrap from '../../node_modules/bootstrap/dist/js/bootstrap.js';
     // manage active state and scrolling
     function handleLinkClick() {
         var href = $(this).attr('href');
-        var isNavLink = $(this).hasClass('.nav-link');
+        var isNavLink = $(this).hasClass('nav-link');
         if(href.indexOf('#') > -1) {
             animateToSection(href);
             if(isNavLink) {
