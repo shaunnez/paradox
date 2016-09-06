@@ -1,0 +1,26 @@
+#contact-form {
+    overflow: hidden;
+    input, textarea {
+        background-color: #f5f5f5;
+        color: #555;
+    }
+    #message-info {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.9s ease;
+        &.bg-primary .valid { 
+            display: block;
+        }
+        &.bg-warning .invalid { 
+            display: block;
+        }
+        span {
+            display: none;
+        }
+    }
+    #form {
+        overflow: hidden;
+        transition: all 0.9s ease;
+    }
+}

@@ -1,0 +1,47 @@
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    @include media-breakpoint-up(lg) {
+        background-color: transparent;
+    }
+    &.animated {
+        animation-duration: .5s;
+        will-change: transform, opacity;
+        animation-fill-mode: both;
+    }
+   
+    &.headroom--not-top {
+        background-color: white;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        .navbar-brand, .nav-link, .navbar-toggler {
+            color: #191a1c;
+        }
+    }
+    .nav-link, .navbar-toggler {
+        padding: 15px;
+        line-height: 1;
+        color: #191a1c;
+        @include media-breakpoint-up(lg) {
+            color: white;
+        }
+    }
+    .navbar-brand {
+        flex-grow: 1;
+    }
+    .logo {
+        margin: 10px 15px;
+        height: 48px;
+    }
+    .navbar-toggler {
+        margin-top: 10px;
+    }
+}

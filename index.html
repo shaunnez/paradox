@@ -9,49 +9,390 @@
     <title>Webpack Boilerplate</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" type="text/css" href="build/style.css" />
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:400,100,200,300%7CHind:400,300" rel="stylesheet" type="text/css">
+    <!--<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">-->
+    <!--<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:400,100,200,300%7CHind:400,300" rel="stylesheet" type="text/css">-->
 <link href="https://shaunnez.github.io/paradox/build/style.css" rel="stylesheet"></head>
 <body>
-    <div class="pre-loader"><div></div></div>    <nav class="navbar navbar-static-top navbar-light bg-faded">
-        <a href="#" class="navbar-brand">Carousel</a>
-        <ul class="nav navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-        </li>
-        </ul>
-    </nav>    <section id="hero">
-        
-    </section>    <section id="about">
-        hello ad
-    </section>    <section id="service">
-        
-    </section>    <section id="contact">
-        
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>    <nav class="navbar navbar-fixed-top headroom">
+        <a href="#" class="navbar-brand">
+            <img class="logo" src="public/img/paradox-logo.png" />
+            <span class="sr-only">Paradox</span>
+        </a>
+        <button class="navbar-toggler hidden-lg-up pull-right" type="button" data-toggle="collapse" data-target="#navbar-menu" 
+        aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <div class="clearfix"></div>
+        <div id="navbar-menu" class="collapse navbar-toggleable-md">
+            <ul class="nav navbar-nav pull-lg-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="#hero">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#capabilities">Capabilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#offers">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-form">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>    <section id="hero" class="parallax dark">
+        <div class="parallax-background">
+            <div id="video-container"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-xs-center">
+                    <h1>We Are Paradox<br/><strong>A leading digital agency</strong></h1>
+                    <p class="lead">We are a digital agency that loves crafting beautiful websites and apps with great functionality</p>
+                    <a href="#about" class="btn btn-lg btn-primary">Find out more</a>
+                </div>
+            </div>
+        </div>
+    </section>    <section id="about" class="p-t-3 p-b-3">
+        <div class="container p-t-3 p-b-3">
+            <div class="row">
+                <div class="col-md-12 text-xs-center m-b-3">
+                    <h2>We Are Paradox<br/><strong class="text-primary">A Leading Digital Agency</strong></h2>
+                    <p>Lorem ipsum mere tur lorem ipsum <a href="#contact-form">abc</a> lorem ipsum mere tur</p>
+                </div>
+                <div class="col-sm-6 feature-left">
+                    <i class="icon-telescope size-3x text-primary"></i>
+                    <i class="icon-telescope back-icon"></i>
+                    <div class="feature-left-content">
+                        <h4><strong class="text-primary">We're Creative</strong><br>Crafting With Love</h4>
+                        <p>Vivamus congue diam vitae tortor imperdiet congue. Nullam sagittis, tristique diam, ut ullamcorper tellus. Cras porttitor massa.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 feature-left">
+                    <i class="icon-circle-compass size-3x text-primary"></i>
+                    <i class="icon-circle-compass back-icon"></i>
+                    <div class="feature-left-content">
+                        <h4><strong class="text-primary">We're Passionate</strong><br>Available When You Need Us</h4>
+                        <p>Vivamus congue diam vitae tortor imperdiet congue. Nullam sagittis, tristique diam, ut ullamcorper tellus. Cras porttitor massa.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 feature-left">
+                    <i class="icon-genius size-3x text-primary"></i>
+                    <i class="icon-genius back-icon"></i>
+                    <div class="feature-left-content">
+                        <h4><strong class="text-primary">We're Cool Nerds</strong><br>Coding With Fun</h4>
+                        <p>Vivamus congue diam vitae tortor imperdiet congue. Nullam sagittis, tristique diam, ut ullamcorper tellus. Cras porttitor massa.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 feature-left">
+                    <i class="icon-layers size-3x text-primary"></i>
+                    <i class="icon-layers back-icon"></i>
+                    <div class="feature-left-content">
+                        <h4><strong class="text-primary">We're Professional</strong><br>Auckland Based</h4>
+                        <p>Vivamus congue diam vitae tortor imperdiet congue. Nullam sagittis, tristique diam, ut ullamcorper tellus. Cras porttitor massa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <section id="skills" class="parallax dark p-t-3 p-b-3">
+        <div class="parallax-background" style="background-image: url(public/img/backgrounds/bg-2.jpg)">
+            <img src="public/img/backgrounds/bg-2.jpg" alt="#">
+        </div>
+        <div class="container p-t-3 p-b-3">   
+            <div class="row vertical-align ">
+                <div class="col-md-6 pr30 mt40">   
+                    <h2><strong>Our Skills</strong><br><span class="text-primary">Crafting With Love</span></h2>   
+                    <p class="text-muted">Fusce faucibus tincidunt nulla, tincidunt sagittis magna venenatis quis. Proin commodo eu ipsum eu suscipit. In dapibus arcu sit amet imperdiet. Praesent condimentum nulla at mauris ornare. Praesent condimentum nulla at mauris ornare, eget consequat felis euismod. Praesent condimentum nulla at mauris ornare.</p>
+                    <p class="text-muted">Praesent condimentum nulla at mauris ornare, eget consequat felis euismod. Praesent condimentum nulla at mauris ornare. Fusce faucibus tincidunt nulla, tincidunt sagittis magna venenatis quis. Proin commodo eu ipsum eu suscipit.</p> 
+                </div>
+                <div class="col-md-6 pt40 pb30">                        
+                    <div class="progress-bars standard transparent-bars" data-animate-on-scroll="on">
+                        <h5 class="bold">Branding</h5>
+                        <progress class="progress progress-primary" value="85" max="100" aria-describedby="Branding"></progress>
+                        <h5 class="bold">User Experience</h5>
+                        <progress class="progress progress-primary" value="100" max="100" aria-describedby="User Experience"></progress>
+                        <h5 class="bold">Web Design</h5>
+                        <progress class="progress progress-primary" value="70" max="100" aria-describedby="Web Design"></progress>
+                        <h5 class="bold">Fun</h5>
+                        <progress class="progress progress-primary" value="82" max="100" aria-describedby="Fun"></progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <section id="team" class="p-t-3 p-b-3">
+        <div class="container p-t-3 p-b-3">    
+            <div class="row">   
+                <div class="col-md-12 text-xs-center m-b-3">
+                    <h2>Our Creative <strong class="text-primary">Collective</strong></h2>
+                    <p class="lead">Interdisciplinary teams with <span class="color">big ideas</span>. Design and prototyping from day one.</p> 
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="team-container m-b-1">
+                        <div class="team-image">
+                            <img src="public/img/team/shaun.jpg" class="img-responsive" alt="#">
+                        </div> 
+                        <div class="team-caption">
+                            <ul> 
+                                <li class="social-icon"><a href="https://www.twitter.com/" target="_blank" class="text-primary"><i class="icon-twitter"></i></a></li>
+                                <li class="social-icon"><a href="https://www.facebook.com/" target="_blank" class="text-primary"><i class="icon-facebook "></i></a></li>
+                                <li class="social-icon"><a href="https://www.linkedin.com/" target="_blank" class="text-primary"><i class="icon-linkedin "></i></a></li>
+                                <li class="social-icon"><a href="https://plus.google.com/" target="_blank" class="text-primary"><i class="icon-googleplus"></i></a></li> 
+                            </ul> 
+                        </div>  
+                    </div>
+                    <h6>Founder / CEO</h6>
+                    <h5>Shaun Nesbitt</h5>
+                    <p class="m-t-1">Vivamus motestues phasellus enim sed orci eu pharetra. Donec posuere nunc vitae tortor sagittis feugiat in non massa. Quisqueeas sed mi nec.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="team-container m-b-1">
+                        <div class="team-image">
+                            <img src="public/img/team/alicia.jpg" class="img-responsive" alt="#">
+                        </div> 
+                        <div class="team-caption">
+                            <ul> 
+                                <li class="social-icon"><a href="https://www.twitter.com/" target="_blank" class="text-primary"><i class="icon-twitter"></i></a></li>
+                                <li class="social-icon"><a href="https://www.facebook.com/" target="_blank" class="text-primary"><i class="icon-facebook "></i></a></li>
+                                <li class="social-icon"><a href="https://www.linkedin.com/" target="_blank" class="text-primary"><i class="icon-linkedin "></i></a></li>
+                                <li class="social-icon"><a href="https://plus.google.com/" target="_blank" class="text-primary"><i class="icon-googleplus"></i></a></li> 
+                            </ul> 
+                        </div>  
+                    </div>
+                    <h6>Founder / CEO</h6>
+                    <h5>Alicia Pedersen</h5>
+                    <p class="m-t-1">Vivamus motestues phasellus enim sed orci eu pharetra. Donec posuere nunc vitae tortor sagittis feugiat in non massa. Quisqueeas sed mi nec.</p>
+                </div>
+            </div>
+        </div>
+    </section>    <section id="headline" class="parallax dark p-t-3 p-b-3">
+        <div class="parallax-background" style="background-image: url(public/img/backgrounds/bg-4.jpg);">
+            <img src="public/img/backgrounds/bg-4.jpg" alt="#">
+        </div>
+        <div class="container p-t-3 p-b-3">   
+            <div class="row vertical-align text-xs-center p-t-3 p-b-3">
+                <div class="col-md-12 p-t-3 p-b-3">   
+                    <h2>A Perfect Design is <strong class="text-primary">Passion, Dedication</strong><br>and lots of Coffee</h2> 
+                    <a href="#contact-form" class="btn btn-primary btn-md m-t-1 color-white">Paradox Team</a> 
+                </div>
+            </div>
+        </div>
+    </section>    <section id="capabilities" class="p-t-3 p-b-3">
+        <div class="container p-t-3 p-b-3">
+            <div class="row">
+                <div class="col-md-12 text-xs-center m-b-3">
+                    <h2>What We Do<br/><strong class="text-primary">Our Capabilities</strong></h2>
+                    <p>A highly skilled professional service with a <a href="#contact-form">creative touch</a>.</p>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 feature-left">
+                    <i class="icon-telescope size-3x color"></i>
+                    <i class="icon-telescope back-icon"></i> 
+                    <div class="feature-left-content">
+                        <h4><strong class="text-primary">Graphic Design</strong><br>Crafting With Love</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                    </div> 
+                </div>
+                <div class="col-md-4 col-sm-6 feature-left">
+                    <i class="icon-circle-compass size-3x color"></i>
+                    <i class="icon-circle-compass back-icon"></i> 
+                    <div class="feature-left-content">
+                        <h4><strong class="text-primary">Modern Coding</strong><br>Crafting With Love</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p> 
+                    </div> 
+                </div>
+                <div class="col-md-4 col-sm-6 feature-left">
+                    <i class="icon-genius size-3x color"></i>
+                    <i class="icon-genius back-icon"></i> 
+                    <div class="feature-left-content">
+                        <h4><strong class="text-primary">Web Optimization</strong><br>Lightning Fast</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p> 
+                    </div> 
+                </div>
+                <div class="col-md-4 col-sm-6 feature-left">
+                    <i class="icon-layers size-3x color"></i>
+                    <i class="icon-layers back-icon"></i> 
+                    <div class="feature-left-content">
+                        <h4><strong class="text-primary">Brand Indentity</strong><br>Making a New You</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                    </div> 
+                </div>
+                <div class="col-md-4 col-sm-6 feature-left">
+                    <i class="icon-gears size-3x color"></i>
+                    <i class="icon-gears back-icon"></i> 
+                    <div class="feature-left-content">
+                        <h4><strong class="text-primary">24/7 Free Support</strong><br>Free Support</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p> 
+                    </div> 
+                </div>
+                <div class="col-md-4 col-sm-6 feature-left">
+                    <i class="icon-globe size-3x color"></i>
+                    <i class="icon-globe back-icon"></i> 
+                    <div class="feature-left-content">
+                        <h4><strong class="text-primary">Having Fun</strong><br>Office Surfing</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>    <section id="headline2" class="parallax light p-t-3 p-b-3">
+        <div class="parallax-background" style="background-image: url(public/img/backgrounds/bg-5.jpg);">
+            <img src="public/img/backgrounds/bg-5.jpg" alt="#">
+        </div>
+        <div class="container p-t-3 p-b-3">   
+            <div class="row vertical-align text-xs-center p-t-3 p-b-3">
+                <div class="col-md-12 p-t-3 p-b-3">   
+                    <h2>Ready to <strong class="text-primary">Kickstart</strong> Your Project</h2> 
+                    <p>Use Paradox to build <a href="#">amazing</a> websites and apps</p>
+                    <a href="#contact-form" class="btn btn-primary btn-md m-t-1 color-white">Contact us</a> 
+                </div>
+                
+            </div>
+        </div>
+    </section>    <section id="offers" class="p-t-3 p-b-3">
+        <div class="container p-t-3 p-b-3">
+            <div class="row">
+                <div class="col-md-12 text-xs-center m-b-3">
+                    <h2>Pick One of<br/><strong class="text-primary">Our Latest Offers</strong></h2>
+                    <p><a href="#contact-form">Contact us</a> for a free quote - we're ready when you are.</p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="card-columns">
+                    <div class="card">
+                        <img class="card-img-top" src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Card image cap">
+                        <div class="card-block">
+                        <h4 class="card-title">Card title that wraps to a new line</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div class="card card-block">
+                        <blockquote class="card-blockquote">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer>
+                            <small class="text-muted">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                            </small>
+                        </footer>
+                        </blockquote>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Card image cap">
+                        <div class="card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card card-block card-inverse card-primary text-xs-center">
+                        <blockquote class="card-blockquote">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                        <footer>
+                            <small>
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                            </small>
+                        </footer>
+                        </blockquote>
+                    </div>
+                    <div class="card card-block text-xs-center">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    <div class="card">
+                        <img class="card-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Card image">
+                    </div>
+                    <div class="card card-block text-xs-right">
+                        <blockquote class="card-blockquote">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer>
+                            <small class="text-muted">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                            </small>
+                        </footer>
+                        </blockquote>
+                    </div>
+                    <div class="card card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </section>    <section id="contact" class="parallax dark p-t-3 p-b-3">
+        <div class="parallax-background" style="background-image: url(public/img/backgrounds/bg-8.jpg);">
+            <img src="public/img/backgrounds/bg-8.jpg" alt="#">
+        </div>
+        <div class="container p-t-3 p-b-3">   
+            <div class="row vertical-align text-xs-center p-t-3 p-b-3">
+                <div class="col-md-12 p-t-3 p-b-3">   
+                    <div class="phone-number m-b-3">
+                        <h1><strong>022 057 2497</strong></h1>
+                    </div>
+                    <h3><a href="mailto:uksn@me.com">uksn@me.com</a>
+                    <h4>Auckland CBD, Auckland, New Zealand</h4> 
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact-form" class="p-t-3 p-b-3">
+        <div class="container p-t-3 p-b-3">
+            <div class="row">     
+                <div class="col-md-12 text-xs-center m-b-2">   
+                    <h2>Get In Touch<br><strong class="text-primary">Contact Us</strong></h2>
+                    <p class="lead">We would like to <span class="color">hear from you</span></p>
+                </div>
+                <div class="col-md-8 offset-md-2 contact box-style"> 
+                    <div id="message-info" class="text-xs-center">
+                        <div class='p-t-1 p-b-1'>
+                            <span class="valid">Thank you, we will get back to you soon</span>
+                            <span class="invalid">Please fill in all the fields to continue</span>
+                        </div>
+                    </div>
+                    <!-- Forms can be functional only on server. Upload to your server when testing. -->
+                    <form id="form" method="post" method="POST" action="http://formspree.io/uksn@me.com" target="form-iframe" class="m-t-1"> 
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="Your Name *" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" placeholder="Your Email *" class="form-control">
+                        </div>
+                        <div class="form-group"> 
+                            <textarea name="message" rows="9" id="message" placeholder="Your Message *" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group text-xs-center">
+                            <button type="submit" class="submit btn btn-lg btn-primary" id="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>  
+            </div>
+        </div>
+        <iframe class="hidden" id="form-iframe" name="form-iframe" height="0" width="0" frameborder="0"></iframe>
     </section>    <footer id="footer" class="footer style-1 dark">
-    
-        <!--<a href="index.html"><img src="img/assets/footer-logo.png" alt="#" class="mr-auto img-responsive"></a>-->
-        <ul>
-            <li><a href="https://www.twitter.com/" target="_blank" class="color"><i class="ion-social-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/" target="_blank" class="color"><i class="ion-social-facebook"></i></a></li>
-            <li><a href="https://www.linkedin.com/" target="_blank" class="color"><i class="ion-social-linkedin"></i></a></li>
-            <li><a href="https://www.pinterest.com/" target="_blank" class="color"><i class="ion-social-pinterest"></i></a></li> 
-            <li><a href="https://plus.google.com/" target="_blank" class="color"><i class="ion-social-googleplus"></i></a></li> 
+        <a href="#hero"><img src="public/img/paradox-logo-footer.png" alt="#" class="mr-auto img-responsive footer-logo"></a>
+        <ul class="m-t-2">
+            <li class="social-icon"><a href="https://www.twitter.com/" target="_blank" class="text-primary"><i class="icon-twitter"></i></a></li>
+            <li class="social-icon"><a href="https://www.facebook.com/" target="_blank" class="text-primary"><i class="icon-facebook "></i></a></li>
+            <li class="social-icon"><a href="https://www.linkedin.com/" target="_blank" class="text-primary"><i class="icon-linkedin "></i></a></li>
+            <li class="social-icon"><a href="https://plus.google.com/" target="_blank" class="text-primary"><i class="icon-googleplus"></i></a></li> 
         </ul>
-        <a href="http://themeforest.net/user/vossendesign/portfolio" target="_blank"><strong>© Paradox 2016</strong></a>
+        <a href="#contact-form"><strong>© Paradox 2016</strong></a>
         <p>Made with love for great people.</p>
-    
         <!-- Back To Top Button -->
-        <span><a class="scroll-top"><i class="ion-chevron-up"></i></a></span>
-    
+        <span><a href="#hero" class="scroll-top text-primary"><i class="chevron"></i></a></span>
     </footer>    <script src="build/bundle.js"></script>
 <script type="text/javascript" src="https://shaunnez.github.io/paradox/build/bundle.js"></script></body>
 </html>

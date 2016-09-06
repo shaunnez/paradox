@@ -1,0 +1,20 @@
+#hero {
+    position: relative;
+    height: auto;
+    padding: 114px 0;
+    overflow: hidden;
+    @include media-breakpoint-up(lg) {
+        height: 100vh;
+    }
+    .background-image {
+        top: 0;
+    }
+    .container {
+        color: #fff;
+        @include media-breakpoint-up(lg) {
+            padding-top: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

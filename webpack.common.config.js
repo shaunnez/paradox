@@ -39,7 +39,7 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             "window.jQuery": 'jquery',
-            "windows.jQuery": 'jquery',
+            "window.Tether": 'tether'
         }),
         new HotModuleReplacementPlugin()
     ],
