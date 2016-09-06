@@ -1,4 +1,5 @@
 (function() {
+    var videoID = 'rrNL9RlPDk0';
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -9,7 +10,7 @@
             height:'100%',
             width: '100%',
             fitToBackground: true,  
-            videoId: 'rrNL9RlPDk0',
+            videoId: videoID,
             playerVars: { 
                 'autoplay': 1, 
                 'controls': 0,
@@ -23,7 +24,7 @@
                 'color': 'white', 
                 'theme': 'light', 
                 'rel':0  ,
-                'playlist': 'rrNL9RlPDk0'
+                'playlist': videoID
             },
             events: {
                 'onReady': onPlayerReady
@@ -38,8 +39,4 @@
         player.setPlaybackQuality('hd1080');
         $('body').addClass('loaded');    
     }
-
-    $(window).on('resize', function() {
-        console.log('here')
-    })
 })();
