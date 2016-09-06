@@ -62,6 +62,9 @@
         width: 200%;
         height: 100%;
     }
+    img {
+        display: none;
+    }
 }
 .vertical-align {
     @include media-breakpoint-up(sm) {
