@@ -1,0 +1,11 @@
+#services {
+    .card {
+        padding-top: 15px;
+    }
+    .card-img-top, .card-img {
+        max-height: 125px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: block;
+    }
+}
