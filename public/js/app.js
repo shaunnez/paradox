@@ -45,7 +45,7 @@ import bootstrap from '../../node_modules/bootstrap/dist/js/bootstrap.js';
         // form submit handler
         form.on('submit', handleFormSubmit);
         // minor
-        parallaxBgs.css('opacity', 1);
+        $("#hero .parallax-background").css('opacity', 1);
     }
 
     // force hero to be shown on load
@@ -67,17 +67,46 @@ import bootstrap from '../../node_modules/bootstrap/dist/js/bootstrap.js';
         });
         headroom.init();
     }
+    
+    function isElementInViewport (el, type) {
+        //special bonus for those using jQuery
+        if (typeof jQuery === "function" && el instanceof jQuery) {
+            el = el[0];
+        }
+        var rect = el.getBoundingClientRect();
+        if(type === 'top') {
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                (rect.top + 50) <= (window.innerHeight || $(window).height()) &&
+                rect.right <= (window.innerWidth || $(window).width())
+            );
+        } else {
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || $(window).height()) &&
+                rect.right <= (window.innerWidth || $(window).width())
+            );
+        }
+    }
+
+
     // update navbar on scroll
     function handleScrolling() {
         if(scrolling === false) {
             sections.each(function() {
-                var top = window.pageYOffset;
-                var distance = top - $(this).offset().top;
                 var hash = $(this).attr('id');
-                if(hash === 'contact') {
-                    hash = 'contact-form';
+                if (isElementInViewport($(this), 'top')) {
+                    var parralax = $("#" + hash).find(".parallax-background");
+                    if(parralax.length > 0) {
+                        parralax.css('opacity', 1);
+                    }
                 }
-                if (distance < 50 && distance > -50 && currentHash !== hash) {
+                if (isElementInViewport($(this))) {
+                    if(hash === 'contact') {
+                        hash = 'contact-form';
+                    }
                     currentHash = hash;
                     setActiveLink('#' + currentHash, true);
                 }
