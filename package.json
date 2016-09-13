@@ -1,7 +1,7 @@
 {
-  "name": "paradox",
+  "name": "NimbleCat",
   "version": "1.0.0",
-  "description": "Paradox web site",
+  "description": "NimbleCat web site",
   "main": "index.js",
   "scripts": {
     "build": "npm run lint && webpack --config webpack.config.js -p",
