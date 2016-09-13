@@ -10,7 +10,7 @@ var htmlwp = new HtmlWebpackPlugin({
 
 var output = {
     path: path.resolve(__dirname, 'build'),
-    publicPath: 'http://www.nimblecat.co.nz/',
+    publicPath: 'http://www.nimblecat.co.nz/build/',
     filename: 'bundle.js'
 };
 
