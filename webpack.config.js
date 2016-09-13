@@ -10,7 +10,7 @@ var htmlwp = new HtmlWebpackPlugin({
 
 var output = {
     path: path.resolve(__dirname, 'build'),
-    publicPath: 'https://shaunnez.github.io/paradox/build/',
+    publicPath: 'https://www.nimblecat.co.nz/',
     filename: 'bundle.js'
 };
 
