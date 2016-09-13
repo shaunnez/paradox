@@ -37,9 +37,13 @@
         flex-grow: 1;
         padding: 0;
     }
-    .logo {
+    .logo, .text-logo {
         margin: 10px 15px;
         height: 48px;
+    }
+    .text-logo {
+        display: flex;
+        align-items: center;
     }
     .navbar-toggler {
         position:absolute;
