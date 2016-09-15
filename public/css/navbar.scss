@@ -18,9 +18,25 @@
         will-change: transform, opacity;
         animation-fill-mode: both;
     }
+    &.headroom--top {
+        .logo-normal {
+            display: block;
+        }
+        @include media-breakpoint-up(lg) {
+            .logo-normal {
+                display: none;
+            }
+            .logo-invert {
+                display: block;
+            }
+        }
+    }
     &.headroom--not-top {
         background-color: white;
         border-bottom: 1px solid rgba(0,0,0,0.1);
+        .logo-normal {
+            display: block;
+        }
         .navbar-brand, .nav-link, .navbar-toggler {
             color: #191a1c;
         }
@@ -40,6 +56,12 @@
     .logo, .text-logo {
         margin: 10px 15px;
         height: 48px;
+    }
+    .logo {
+        display: none;
+        height: auto;
+        width: 100%;
+        max-width: 360px;
     }
     .text-logo {
         display: flex;
