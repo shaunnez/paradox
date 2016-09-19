@@ -62,6 +62,9 @@
         height: auto;
         width: 100%;
         max-width: 360px;
+        @include media-breakpoint-up(lg) {
+            max-width: 240px;
+        }
     }
     .text-logo {
         display: flex;

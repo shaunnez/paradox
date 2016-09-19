@@ -46,6 +46,14 @@ import bootstrap from '../../node_modules/bootstrap/dist/js/bootstrap.js';
         form.on('submit', handleFormSubmit);
         // minor
         $("#hero .parallax-background").css('opacity', 1);
+
+        $('.carousel').carousel({ interval: 5000 });
+        $('.carousel').on('slide.bs.carousel', function(ev) {
+            var lazy;
+            lazy = $(ev.relatedTarget).find("img[data-src]");
+            lazy.attr("src", lazy.data('src'));
+            lazy.removeAttr("data-src");
+        })
     }
 
     // force hero to be shown on load

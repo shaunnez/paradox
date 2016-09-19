@@ -43,7 +43,7 @@
 // @import "../../node_modules/bootstrap/scss/modal";
 // @import "../../node_modules/bootstrap/scss/tooltip";
 // @import "../../node_modules/bootstrap/scss/popover";
-// @import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/carousel";
 
 // Utility classes
 @import "../../node_modules/bootstrap/scss/utilities";
@@ -55,9 +55,11 @@
 @import "../../node_modules/et-line/style.css";
 @import "./common.scss";
 @import "./contact.scss";
+@import "./examples.scss";
 @import "./footer.scss";
 @import "./hero.scss";
 @import "./navbar.scss";
 @import "./preloader.scss";
 @import "./services.scss";
 @import "./team.scss";
+
