@@ -11,7 +11,9 @@
     }
 
     if(window.innerWidth < 768) {
-        $('body').addClass('loaded');    
+        $(document).ready(function() {
+            $('body').addClass('loaded');    
+        })
         $(window).on('resize', function() {
             if(!scriptAdded && window.innerWidth >= 768) {
                 addScript();
