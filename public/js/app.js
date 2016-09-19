@@ -3,6 +3,7 @@ import $ from "jquery";
 import './video.js';
 import Headroom from './headroom.js';
 import bootstrap from '../../node_modules/bootstrap/dist/js/bootstrap.js';
+import Unveil from './jquery.unveil.js';
 // import 'waypoints';
 // import 'scrollTo';
 
@@ -46,6 +47,10 @@ import bootstrap from '../../node_modules/bootstrap/dist/js/bootstrap.js';
         form.on('submit', handleFormSubmit);
         // minor
         $("#hero .parallax-background").css('opacity', 1);
+        // lazy load
+        $(".card-image").unveil(200, function() {
+            $(this).on('load', function() { this.style.opacity = 1; });
+        });
 
         $('.carousel').carousel({ interval: 5000 });
         $('.carousel').on('slide.bs.carousel', function(ev) {
@@ -53,6 +58,11 @@ import bootstrap from '../../node_modules/bootstrap/dist/js/bootstrap.js';
             lazy = $(ev.relatedTarget).find("img[data-src]");
             lazy.attr("src", lazy.data('src'));
             lazy.removeAttr("data-src");
+            var next = $(ev.relatedTarget).next().find('img[data-src]');
+            if(next && next.length > 0) {
+                next.attr("src", next.data('src'));
+                next.removeAttr("data-src");
+            }
         })
     }
 
