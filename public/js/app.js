@@ -48,7 +48,7 @@ import Unveil from './jquery.unveil.js';
         // minor
         $("#hero .parallax-background").css('opacity', 1);
         // lazy load
-        $(".card-image").unveil(200, function() {
+        $(".card-image").unveil(600, function() {
             $(this).on('load', function() { this.style.opacity = 1; });
         });
 
