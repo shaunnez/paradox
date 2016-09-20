@@ -1,9 +1,14 @@
-#examples {
+
+#carousel-nimblecat {
+    padding-top: 55px;
     .carousel-item img {
+        margin: auto;
         @include media-breakpoint-up(lg) {
           min-height: 800px;
+          width: 100%;
         }
     }
+    @include media-breakpoint-down(md) {
+        padding-top: 66px;
+    }
 }
-
-
