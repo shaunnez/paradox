@@ -158,10 +158,14 @@ import Unveil from './jquery.unveil.js';
     // scroll to section
     function animateToSection(href) {
         scrolling = true;
-        $('html, body').animate({
+        $('html, body').stop(true, true).animate({
             scrollTop: $( href ).offset().top
         }, 500, function() {
-            scrolling = false;
+            $('html, body').stop(true, true).animate({
+                scrollTop: $( href ).offset().top
+            }, 100, function() {
+                scrolling = false;
+            });
         });
     }
     // force mobile menu to collapse
