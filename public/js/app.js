@@ -34,7 +34,7 @@ import Unveil from './jquery.unveil.js';
     // helper
     function init() {
         // force go to hero on load
-        // goToHero();
+        goToHero();
         // navbar color change handler
         setupHeadroom();
         // update navbar on scroll

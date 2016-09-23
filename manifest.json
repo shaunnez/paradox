@@ -1,0 +1,9 @@
+{
+  "name": "NimbleCat",
+  "short_name": "NC",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#0275d8",
+  "description": "NimbleCat Web Design and Application Development. We are a digital agency that loves crafting beautiful websites and apps with great functionality."
+}
