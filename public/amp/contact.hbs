@@ -1,0 +1,64 @@
+
+<section id="contact" class="p-t-3 p-b-3">
+    <div class="container p-t-3 p-b-3">
+        <div class="row">     
+            <div class="col-md-12 text-xs-center m-b-2">   
+                <h2>Get In Touch<br><strong class="text-primary">Contact Us</strong></h2>
+                <p class="lead">We would like to <span class="color">hear from you</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax dark p-t-3 p-b-3">
+        <div class="parallax-background" style="background-image: url(public/img/backgrounds/bg-8.jpg);">
+            <img src="public/img/backgrounds/bg-8.jpg" alt="#">
+        </div>
+        <div class="container p-t-3 p-b-3">   
+            <div class="row vertical-align text-xs-center p-t-3 p-b-3">
+                <div class="col-md-12 p-t-3 p-b-3">   
+                    <div class="phone-number m-b-3">
+                        <h1><strong>022 057 2497</strong></h1>
+                    </div>
+                    <h3><a href="mailto:shaun@nimblecat.co.nz">shaun@nimblecat.co.nz</a>
+                    <h4>Auckland CBD, Auckland, New Zealand</h4> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact-form" class="p-t-3 p-b-3">
+    <div class="container p-t-3 p-b-3">
+        <div class="row">     
+            <div class="col-md-12 text-xs-center m-b-2">   
+                <h2>Enter your <strong class="text-primary">details</strong></h2>
+                <p class="lead">We will get back to you <span class="color">fast!</span></p>
+            </div>
+            <div class="col-md-8 offset-md-2 contact box-style"> 
+                <div id="message-info" class="text-xs-center">
+                    <div class='p-t-1 p-b-1'>
+                        <span class="valid">Thank you, we will get back to you soon</span>
+                        <span class="invalid">Please fill in all the fields to continue</span>
+                    </div>
+                </div>
+                <!-- Forms can be functional only on server. Upload to your server when testing. -->
+                <form id="form" method="post" method="POST" action="https://formspree.io/shaun@nimblecat.co.nz" target="form-iframe" class="m-t-1" > 
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Your Name *" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Your Email *" class="form-control">
+                    </div>
+                    <div class="form-group"> 
+                        <textarea name="message" rows="9" id="message" placeholder="Your Message *" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group text-xs-center">
+                        <button type="submit" class="submit btn btn-lg btn-primary" id="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>  
+        </div>
+    </div>
+    <iframe class="hidden" id="form-iframe" name="form-iframe" height="0" width="0" frameborder="0"></iframe>
+</section>
